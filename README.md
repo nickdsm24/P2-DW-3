@@ -4,6 +4,15 @@ Projeto desenvolvido para a Prova 2 da disciplina de Desenvolvimento Web III.
 
 A aplicação permite gerenciar reservas de mesas em um restaurante, utilizando TypeScript, Express, MongoDB e Mongoose no backend, além de um frontend simples com HTML, CSS e JavaScript.
 
+## Autores
+
+Projeto desenvolvido para fins acadêmicos na disciplina de Desenvolvimento Web III.
+
+| Nome | GitHub |
+|---|---|
+| Nicolas Kaue | [@nickdsm24](https://github.com/nickdsm24) |
+| Bruna Gomes | [@brunagomess26](https://github.com/brunagomess26) |
+
 ## Funcionalidades
 
 ### Reservas
