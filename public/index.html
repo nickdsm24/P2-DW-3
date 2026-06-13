@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistema de Reservas</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header>
+    <h1>Sistema de Reservas de Mesa</h1>
+    <p>Gerencie mesas e reservas do restaurante</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Cadastrar Mesa</h2>
+
+      <form id="form-mesa">
+        <input type="number" id="numMesa" placeholder="Número da mesa" required />
+        <input type="number" id="capacidade" placeholder="Capacidade" required />
+
+        <select id="loc" required>
+          <option value="">Selecione a localização</option>
+          <option value="Salão">Salão</option>
+          <option value="Varanda">Varanda</option>
+          <option value="Área Interna">Área Interna</option>
+        </select>
+
+        <button type="submit">Cadastrar Mesa</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Criar Reserva</h2>
+
+      <form id="form-reserva">
+        <input type="text" id="nomeCliente" placeholder="Nome do cliente" required />
+        <input type="text" id="telCliente" placeholder="Telefone do cliente" required />
+
+        <select id="mesa" required>
+          <option value="">Selecione uma mesa</option>
+        </select>
+
+        <input type="number" id="quantPessoa" placeholder="Quantidade de pessoas" required />
+        <input type="datetime-local" id="horaInicio" required />
+        <input type="text" id="obs" placeholder="Observações" />
+
+        <button type="submit">Criar Reserva</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Filtros</h2>
+
+      <div class="filtros">
+        <input type="text" id="filtroCliente" placeholder="Filtrar por cliente" />
+
+        <select id="filtroMesa">
+          <option value="">Todas as mesas</option>
+        </select>
+
+        <input type="date" id="filtroData" />
+
+        <select id="filtroStatus">
+          <option value="">Todos os status</option>
+          <option value="Reservado">Reservado</option>
+          <option value="Ocupado">Ocupado</option>
+          <option value="Finalizado">Finalizado</option>
+          <option value="Cancelado">Cancelado</option>
+        </select>
+
+        <button id="btn-filtrar">Filtrar</button>
+        <button id="btn-limpar">Limpar</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Mapa Visual das Mesas</h2>
+
+      <div class="legenda">
+        <span><strong class="bolinha verde"></strong> Disponível</span>
+        <span><strong class="bolinha amarelo"></strong> Reservado</span>
+        <span><strong class="bolinha vermelho"></strong> Ocupado</span>
+      </div>
+
+      <div id="mapa-mesas" class="mapa-mesas"></div>
+    </section>
+
+    <section class="card">
+      <h2>Reservas</h2>
+      <div id="lista-reservas"></div>
+    </section>
+  </main>
+
+  <div id="mensagem" class="mensagem"></div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
